@@ -99,6 +99,9 @@ padding: 0px;
   background: #eaeaea;
   margin-top: 0;
   font-weight: bolder;
+  z-index: 5;
+  text-shadow: 4px 4px 4px #aaa;
+
 }
 .toolbar span {
   font-size: 1em;
