@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #61dafb;
+}
+code {
+  display: block;
+  background: #282c34;
+  color: aliceblue;
+  margin: 10px;
+}
+table {
+  background: white;
+  margin: 10px auto;
+  border-radius: 15px;
+  padding: 5px;
+  width: 80%;
+}
+button {
+  outline: none;
+  border: none;
+  background: #eaeaea;
+  color: #111111;
+}
+/* * {
+    transition: all 1s ease-out ;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: 2px solid #111111;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Source Code Pro", monospace;
+  background: #61dafb;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.editor,
+.previewer {
+  border: 2px solid #111111;
+padding: 0px;
+  position: relative;
+  transition: 0.5s all ease-in;
+  background: wheat;
+  box-shadow: -4px 6px 40px 13px rgba(0,0,0,0.75);
+
+  /* opacity: 0.7; */
+}
+.editor {
+  min-height: 15vw;
+  width: 50vw;
+  height: auto;
+  margin: 20px auto;
+  padding: 0px;
+  
+}
+
+.editor textarea {
+  max-width: 100%;
+  min-width: 100%;
+  /* max-width: 40vw; */
+  min-height: 30vh;
+  height: 100%;
+  height: auto;
+  outline: none;
+  border: none;
+  font-family: monospace;
+  
+  resize: vertical;
+}
+.previewer {
+  width: 70vw;
+  height: auto;
+  
+}
+#preview {
+  padding: 8px 15px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid #111111;
+  padding: 5px;
+  margin: 10px auto;
+  background: #eaeaea;
+  margin-top: 0;
+  font-weight: bolder;
+}
+.toolbar span {
+  font-size: 1em;
+}
+
+.max {
+  width: 96%;
+  min-height: 100vh;
+  margin: 10px auto;
+  /* position: fixed; Stay in place */
+  z-index: 1; /* Sit on top */
+  margin: auto;
+  top: 0;
+  position: absolute;
+ 
+  box-shadow: -4px 6px 60px 13px rgba(0,0,0,0.75);
+
+
+}
+.max textarea {
+  height: 90vh;
+}
+.editor-max {
+  
+  overflow: hidden;
+  position: fixed;
+ 
+}
+
+
+
+@media (max-width: 900px) {
+  .editor {
+    width: 80vw;
+    height: 30vh;
+  }
+}
