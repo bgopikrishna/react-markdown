@@ -24,6 +24,10 @@ button {
   background: #eaeaea;
   color: #111111;
 }
+img{
+  display: block;
+  width: 100%;
+}
 /* * {
     transition: all 1s ease-out ;
 } */
@@ -137,5 +141,15 @@ padding: 0px;
   .editor {
     width: 80vw;
     height: 30vh;
+  }
+  .previewer {
+    width: 80vw;
+  }
+  .editor textarea {
+    min-height: 20vh;
+  }
+  #contact {
+    bottom: 1%;
+    right: 0.5%;
   }
 }

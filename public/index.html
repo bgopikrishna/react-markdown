@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
- 
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
   <!--
@@ -28,14 +28,33 @@
   <style>
     #contact {
       font-size: 1em;
-      top: 0;
+      bottom: 5%;
       right: 40px;
       float: right;
-      color: black;
+      color: rgb(8, 4, 4);
       position: fixed;
+      z-index: 7;
     }
+
     #contact a {
-      color: black;
+      color: inherit;
+      text-shadow: 2px 2px 2px #c9c9c9;
+
+    }
+
+    #contact a::after {
+      content: "";
+      display: block;
+      width: 0;
+margin: 1px auto;
+      height: 2px;
+      background: #222222;
+      transition: width 0.3s;
+    }
+
+    #contact a:hover::after {
+      width: 100%;
+      transition: width 0.3s;
     }
   </style>
 </head>
@@ -65,4 +84,4 @@
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
-</html> 
+</html>
