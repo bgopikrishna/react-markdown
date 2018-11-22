@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <!--
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-  <!--
+    <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,54 +33,67 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>React Markdown Previewer</title>
-  <style>
-    #contact {
-      font-size: 1em;
-      bottom: 5%;
-      right: 40px;
-      float: right;
-      color: rgb(8, 4, 4);
-      position: fixed;
-      z-index: 7;
-    }
+    <title>React Markdown Previewer</title>
+    <style>
+      #contact {
+        font-size: 1em;
+        bottom: 5%;
+        right: 40px;
+        float: right;
+        color: rgb(8, 4, 4);
+        position: fixed;
+        z-index: 7;
+      }
 
-    #contact a {
-      color: inherit;
-      text-shadow: 2px 2px 2px #c9c9c9;
+      #contact a {
+        color: inherit;
+        text-shadow: 2px 2px 2px #c9c9c9;
+      }
 
-    }
+      #contact .link-effect::after {
+        content: "";
+        display: block;
+        width: 0;
+        margin: 1px auto;
+        height: 2px;
+        background: #222222;
+        transition: width 0.3s;
+      }
 
-    #contact a::after {
-      content: "";
-      display: block;
-      width: 0;
-margin: 1px auto;
-      height: 2px;
-      background: #222222;
-      transition: width 0.3s;
-    }
+      #contact .link-effect:hover::after {
+        width: 100%;
+        transition: width 0.3s;
+      }
+    </style>
+  </head>
 
-    #contact a:hover::after {
-      width: 100%;
-      transition: width 0.3s;
-    }
-  </style>
-</head>
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <!--
+      <header>
+        <a href="#">
+          <h1> React Markedown Previewer</h1>
+        </a>
 
-<body>
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <!-- <header>
-    <a href="#">
-      <h1> React Markedown Previewer</h1>
-    </a>
-
-  </header> -->
-  <span id="contact"><a href="https://github.com/bgopikrishna">By Gopi krishna</a></span>
-  <div id="root"></div>
-  <!--
+      </header>
+    -->
+    <span id="contact"
+      ><a
+        style="font-size: 14px;"
+        class="link-effect"
+        href="https://github.com/bgopikrishna"
+        >By Gopi krishna</a
+      >
+      <a
+        style="font-size: 10px;"
+        href="https://github.com/bgopikrishna/react-markdown"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Source Code Here</a
+      ></span
+    >
+    <div id="root"></div>
+    <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -81,7 +103,6 @@ margin: 1px auto;
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-</body>
-
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>
