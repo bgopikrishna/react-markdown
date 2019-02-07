@@ -4,7 +4,6 @@ import Editor from "./components/Editor";
 import Previewer from "./components/Previewer";
 import Topbar from "./components/topbar";
 import classNames from "classnames";
-// import marked from "marked";
 
 const marked = require("marked");
 
@@ -15,17 +14,21 @@ class App extends Component {
     this.state = {
       value: defaultPlaceholder,
       editorMaximized: false,
-      previewMaximized: false
+      previewMaximized: false,
+      loading: true
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.getMarkdownText = this.getMarkdownText.bind(this);
     this.handleMaximize = this.handleMaximize.bind(this);
   }
+
   handleChange(event) {
     this.setState({
       value: event.target.value
     });
   }
+
   handleMaximize(myWindow) {
     const { editorMaximized, previewMaximized } = this.state;
 
@@ -57,6 +60,7 @@ class App extends Component {
         <div className={editorClass}>
           <Topbar
             heading={"Editor"}
+            windowIcon={<i className="far fa-edit" />}
             onClick={() => {
               this.handleMaximize("editor");
             }}
@@ -67,7 +71,8 @@ class App extends Component {
 
         <div className={previewClass}>
           <Topbar
-            heading={"Preview"}
+            heading={" Preview"}
+            windowIcon={<i className="fas fa-tv" />}
             onClick={() => {
               this.handleMaximize("preview");
             }}
@@ -124,7 +129,7 @@ And here. | Okay. | I think we get it.
 - Even if you use dashes or asterisks.
 * And last but not least, let's not forget embedded images:
 
-![React Logo w/ Text](https://d33wubrfki0l68.cloudfront.net/cce87b74a290f321f582cb56a12007343ff2d77e/bb9e6/img/glyph.png)
+![A kitten w/ Text](https://placekitten.com/g/200/300)
 `;
 
 export default App;

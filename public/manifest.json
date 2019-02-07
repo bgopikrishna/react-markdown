@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "React Markdown Previewer",
+  "name": "Markdown Previewer",
   "icons": [
     {
       "src": "favicon.ico",

@@ -1,9 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Poppins|Raleway');
 
 body {
   margin: 0;
   padding: 0;
-  background: #61dafb;
+  background: #444444;
+}
+textarea {
+  font-family: 'Poppins', sans-serif;
+
 }
 code {
   display: block;
@@ -19,18 +23,21 @@ table {
   width: 80%;
 }
 button {
-  outline: none;
   border: none;
-  background: #eaeaea;
+  background: #5c737c;
   color: #111111;
 }
-img{
-  display: block;
-  width: 100%;
+button:focus,
+button:hover {
+  color: inherit;
+  background: #5c737c;
 }
-/* * {
-    transition: all 1s ease-out ;
-} */
+
+img {
+  display: block;
+  width: auto;
+  height: auto;
+}
 
 h1,
 h2,
@@ -39,15 +46,13 @@ h4,
 h5,
 h6 {
   border-bottom: 2px solid #111111;
+  font-family: "Raleway", sans-serif;
 }
 
 .App {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-family: "Source Code Pro", monospace;
-  background: #61dafb;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   min-height: 100vh;
 }
@@ -55,98 +60,87 @@ h6 {
 .editor,
 .previewer {
   border: 2px solid #111111;
-padding: 0px;
+  padding: 0px;
   position: relative;
   transition: 0.5s all ease-in;
-  background: wheat;
-  box-shadow: -4px 6px 40px 13px rgba(0,0,0,0.75);
+  background: #ffffff;
 
   /* opacity: 0.7; */
 }
 .editor {
-  min-height: 15vw;
+  height: 100vh;
   width: 50vw;
-  height: auto;
-  margin: 20px auto;
-  padding: 0px;
-  
+  box-sizing: border-box;
 }
 
 .editor textarea {
-  max-width: 100%;
-  min-width: 100%;
+  width: 100%;
   /* max-width: 40vw; */
-  min-height: 30vh;
-  height: 100%;
-  height: auto;
+  height: 90%;
   outline: none;
   border: none;
-  font-family: monospace;
-  
+  padding: 5px;
   resize: vertical;
 }
 .previewer {
-  width: 70vw;
-  height: auto;
-  
+  width: 50vw;
+  height: 100vh;
 }
 #preview {
   padding: 8px 15px;
+  overflow-y: scroll;
+  height: 90%;
 }
 .toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 5px solid #111111;
   padding: 5px;
   margin: 10px auto;
-  background: #eaeaea;
+  height: 30px !important;
+  background: #5c737c;
   margin-top: 0;
-  font-weight: bolder;
+  font-weight: bold;
   z-index: 5;
-  text-shadow: 4px 4px 4px #aaa;
-
+  color: white;
+  text-shadow: 4px 4px 4px #5c737c;
+  border-bottom: 2px solid #5c737c;
 }
 .toolbar span {
   font-size: 1em;
 }
 
+
+
 .max {
-  width: 96%;
-  min-height: 100vh;
-  margin: 10px auto;
+  width: 98vw;
+  height: 100vh;
   /* position: fixed; Stay in place */
   z-index: 1; /* Sit on top */
   margin: auto;
   top: 0;
   position: absolute;
- 
-  box-shadow: -4px 6px 60px 13px rgba(0,0,0,0.75);
-
-
+  transform-origin: center;
+  box-shadow: -4px 6px 60px 13px rgba(0, 0, 0, 0.75);
 }
 .max textarea {
   height: 90vh;
 }
-.editor-max {
-  
-  overflow: hidden;
-  position: fixed;
- 
-}
-
-
 
 @media (max-width: 900px) {
+  .App {
+    flex-direction: column;
+  }
   .editor {
-    width: 80vw;
-    height: 30vh;
+    width: 100vw;
+    height: 100vh;
   }
   .previewer {
-    width: 80vw;
+    margin-top: 10px;
+    width: 100vw;
   }
   .editor textarea {
-    min-height: 20vh;
+    min-height: 100%;
   }
   #contact {
     bottom: 1%;
